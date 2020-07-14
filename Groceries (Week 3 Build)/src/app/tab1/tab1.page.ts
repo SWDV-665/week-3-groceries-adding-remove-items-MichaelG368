@@ -26,6 +26,7 @@ export class Tab1Page {
 
   constructor(public toastController: ToastController, public alertController: AlertController) {}
 
+  // Function for removing grocery items
   async remove_item(item, index){
     console.log("Removing Item - ", item);
     const toast = await this.toastController.create({
@@ -36,6 +37,7 @@ export class Tab1Page {
     this.items.splice(index, 1);
   }
 
+  // Function for adding grocery items 
   async add_item(){
     const alert = await this.alertController.create({
       cssClass: 'my-custom-class',
